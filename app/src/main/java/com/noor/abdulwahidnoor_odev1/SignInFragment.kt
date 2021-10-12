@@ -1,16 +1,13 @@
 package com.noor.abdulwahidnoor_odev1
 
-import android.graphics.LinearGradient
-import android.graphics.Shader
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.noor.abdulwahidnoor_odev1.databinding.FragmentSignInBinding
+import com.noor.abdulwahidnoor_odev1.util.CustomPaint.setGradientColor
 
 class SignInFragment : Fragment() {
 
@@ -23,14 +20,23 @@ class SignInFragment : Fragment() {
     ): View {
         _binding = FragmentSignInBinding.inflate(inflater, container, false)
 
+        initUI()
+
+        return binding.root
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
+    private fun initUI() {
         binding.apply {
-            tvForgotPassword.setGradientTextColor()
+            tvForgotPassword.setGradientColor()
             btnLogin.setOnClickListener {
                 editTextControl()
             }
         }
-
-        return binding.root
     }
 
     private fun editTextControl() {
@@ -45,23 +51,5 @@ class SignInFragment : Fragment() {
                 findNavController().navigate(SignInFragmentDirections.actionFirstFragmentToSecondFragment())
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
-
-    private fun TextView.setGradientTextColor() {
-        val shader = LinearGradient(
-            0F,
-            0F,
-            0F,
-            lineHeight.toFloat(),
-            ContextCompat.getColor(requireContext(), R.color.green_start),
-            ContextCompat.getColor(requireContext(), R.color.green_end),
-            Shader.TileMode.REPEAT
-        )
-        paint.shader = shader
     }
 }
