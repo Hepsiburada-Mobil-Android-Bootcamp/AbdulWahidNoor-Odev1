@@ -32,7 +32,7 @@ class SignInFragment : Fragment() {
 
     private fun initUI() {
         binding.apply {
-            tvForgotPassword.setGradientColor()
+            tvForgotPassword.setGradientColor(R.color.green_start, R.color.green_end)
             btnLogin.setOnClickListener {
                 editTextControl()
             }

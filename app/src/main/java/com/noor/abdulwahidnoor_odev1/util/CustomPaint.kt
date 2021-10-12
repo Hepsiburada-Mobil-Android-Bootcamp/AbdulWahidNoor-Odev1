@@ -8,14 +8,14 @@ import com.noor.abdulwahidnoor_odev1.R
 
 object CustomPaint {
 
-    fun TextView.setGradientColor() {
+    fun TextView.setGradientColor(startColor: Int, endColor: Int) {
         val shader = LinearGradient(
             0F,
             0F,
             0F,
             height.toFloat(),
-            ContextCompat.getColor(this.context, R.color.green_start),
-            ContextCompat.getColor(this.context, R.color.green_end),
+            ContextCompat.getColor(this.context, startColor),
+            ContextCompat.getColor(this.context, endColor),
             Shader.TileMode.REPEAT
         )
         paint.shader = shader
