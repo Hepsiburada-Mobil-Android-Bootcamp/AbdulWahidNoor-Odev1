@@ -1,4 +1,4 @@
-package com.noor.abdulwahidnoor_odev1
+package com.noor.abdulwahidnoor_odev1.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

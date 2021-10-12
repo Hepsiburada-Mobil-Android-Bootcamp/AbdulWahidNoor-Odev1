@@ -1,4 +1,4 @@
-package com.noor.abdulwahidnoor_odev1
+package com.noor.abdulwahidnoor_odev1.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.noor.abdulwahidnoor_odev1.R
 import com.noor.abdulwahidnoor_odev1.databinding.FragmentSignInBinding
 import com.noor.abdulwahidnoor_odev1.util.CustomPaint.setGradientColor
 

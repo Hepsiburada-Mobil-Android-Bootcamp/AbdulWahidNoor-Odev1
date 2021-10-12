@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_pattern"
-            tools:context=".HomeFragment">
+            tools:context=".view.HomeFragment">
 
             <TextView
                 android:id="@+id/tv_find_favorite_food"

@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_pattern"
-            tools:context=".SignInFragment">
+            tools:context=".view.SignInFragment">
 
             <ImageView
                 android:id="@+id/iv_logo"

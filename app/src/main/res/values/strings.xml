@@ -16,4 +16,5 @@
     <string name="nearest_restaurant">Nearest Restaurant</string>
     <string name="view_more">View More</string>
     <string name="popular_menu">Popular Menu</string>
+    <string name="price_dollar">$%d</string>
 </resources>

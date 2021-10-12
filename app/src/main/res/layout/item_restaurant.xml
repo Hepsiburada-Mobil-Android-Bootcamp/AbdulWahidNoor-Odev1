@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="restaurant"
+            type="com.noor.abdulwahidnoor_odev1.model.Restaurant" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="22dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/iv_item_restaurant"
+                bindRestaurantImage="@{restaurant.image}"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/desc"
+                tools:src="@drawable/restaurant1" />
+
+            <TextView
+                android:id="@+id/tv_item_restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{restaurant.name}"
+                android:textColor="@color/black_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Vegan" />
+
+            <TextView
+                android:id="@+id/tv_item_restaurant_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{restaurant.time}"
+                android:textSize="12sp"
+                tools:text="12 Min" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
