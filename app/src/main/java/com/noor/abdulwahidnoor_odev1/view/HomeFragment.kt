@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayoutMediator
+import com.noor.abdulwahidnoor_odev1.R
 import com.noor.abdulwahidnoor_odev1.adapter.BannerAdapter
 import com.noor.abdulwahidnoor_odev1.adapter.MenuAdapter
 import com.noor.abdulwahidnoor_odev1.adapter.RestaurantAdapter
@@ -28,6 +31,7 @@ class HomeFragment : Fragment() {
 
         initRecyclerViews()
         initViewPager()
+        initToastAndDirection()
 
         return binding.root
     }
@@ -35,6 +39,13 @@ class HomeFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    private fun initToastAndDirection() {
+        Toast.makeText(requireContext(), getString(R.string.go_to_third_fragment), Toast.LENGTH_LONG).show()
+        binding.tvFindFavoriteFood.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionSecondFragmentToThirdFragment())
+        }
     }
 
     private fun initViewPager() {

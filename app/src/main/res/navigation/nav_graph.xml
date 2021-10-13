@@ -31,9 +31,9 @@
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.noor.abdulwahidnoor_odev1.view.ThirdFragment"
+        android:name="com.noor.abdulwahidnoor_odev1.view.LiveDataFragment"
         android:label="fragment_third"
-        tools:layout="@layout/fragment_third" >
+        tools:layout="@layout/fragment_live_data" >
         <action
             android:id="@+id/action_thirdFragment_to_secondFragment"
             app:destination="@id/secondFragment" />

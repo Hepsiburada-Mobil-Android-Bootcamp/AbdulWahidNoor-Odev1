@@ -19,4 +19,5 @@
     <string name="profile">Profile</string>
     <string name="card">Card</string>
     <string name="chat">Chat</string>
+    <string name="go_to_third_fragment">Click Find Your Favorite Food Text for go to third page</string>
 </resources>
