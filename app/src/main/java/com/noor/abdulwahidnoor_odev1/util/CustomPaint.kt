@@ -4,7 +4,6 @@ import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.noor.abdulwahidnoor_odev1.R
 
 object CustomPaint {
 

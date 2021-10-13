@@ -18,7 +18,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_pattern"
+                android:background="@drawable/bg_pattern_home"
                 tools:context=".view.HomeFragment">
 
                 <TextView
@@ -45,8 +45,7 @@
                     android:translationZ="2dp"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_find_favorite_food"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tv_find_favorite_food"
-                    app:tint="@color/green_start" />
+                    app:layout_constraintTop_toTopOf="@+id/tv_find_favorite_food"/>
 
                 <EditText
                     android:id="@+id/et_search"
@@ -91,10 +90,9 @@
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/vp_banner"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
                     android:layout_marginTop="20dp"
-                    android:background="@color/orange_medium"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_search" />

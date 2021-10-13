@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -9,11 +10,13 @@
             type="com.noor.abdulwahidnoor_odev1.model.Banner" />
     </data>
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/iv_item_banner"
+        bindBanner="@{banner.imageId}"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/desc"
-        bindBanner="@{banner.imageId}"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="24dp"
         tools:src="@tools:sample/avatars" />
 </layout>

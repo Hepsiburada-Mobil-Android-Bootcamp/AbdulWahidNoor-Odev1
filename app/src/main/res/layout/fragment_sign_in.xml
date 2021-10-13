@@ -14,7 +14,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_pattern"
+            android:background="@drawable/bg_pattern_sign"
             tools:context=".view.SignInFragment">
 
             <ImageView

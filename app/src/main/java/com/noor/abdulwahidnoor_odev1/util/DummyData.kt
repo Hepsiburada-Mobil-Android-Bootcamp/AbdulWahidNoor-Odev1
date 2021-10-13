@@ -39,7 +39,7 @@ object DummyData {
     fun createBannerList(): ArrayList<Banner> {
         val bannerList = arrayListOf<Banner>()
         for (i in 0..3) {
-            bannerList.add(Banner(R.drawable.restaurant1))
+            bannerList.add(Banner(R.drawable.banner1))
         }
         return bannerList
     }
