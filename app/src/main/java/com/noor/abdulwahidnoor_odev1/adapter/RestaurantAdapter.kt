@@ -20,7 +20,7 @@ class RestaurantAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantHolder {
-        val view = ItemRestaurantBinding.inflate(LayoutInflater.from(parent.context))
+        val view = ItemRestaurantBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return RestaurantHolder(view)
     }
 

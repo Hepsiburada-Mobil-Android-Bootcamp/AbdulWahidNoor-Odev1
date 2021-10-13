@@ -17,7 +17,13 @@ class MenuAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuHolder {
-        return MenuHolder(ItemMenuBinding.inflate(LayoutInflater.from(parent.context)))
+        return MenuHolder(
+            ItemMenuBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: MenuHolder, position: Int) {

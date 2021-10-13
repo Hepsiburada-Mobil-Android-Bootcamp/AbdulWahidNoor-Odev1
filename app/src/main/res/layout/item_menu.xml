@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="menu"
             type="com.noor.abdulwahidnoor_odev1.model.Menu" />
@@ -11,7 +12,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -20,55 +21,55 @@
 
             <ImageView
                 android:id="@+id/iv_menu"
+                bindMenuImage="@{menu.imageId}"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                bindMenuImage="@{menu.imageId}"
-                tools:src="@drawable/menu1"
+                android:contentDescription="@string/desc"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:contentDescription="@string/desc" />
+                tools:src="@drawable/menu1" />
 
             <TextView
                 android:id="@+id/tv_menu_name"
-                android:text="@{menu.name}"
-                tools:text="Green Noddle"
-                android:layout_marginStart="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@{menu.name}"
                 android:textColor="@color/black_text"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_menu_restaurant"
                 app:layout_constraintStart_toEndOf="@+id/iv_menu"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/tv_menu_restaurant"/>
+                tools:text="Green Noddle" />
 
             <TextView
                 android:id="@+id/tv_menu_restaurant"
-                android:text="@{menu.restaurant.name}"
-                tools:text="Green Noddle"
-                android:layout_marginStart="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@{menu.restaurant.name}"
                 android:textColor="@color/black_text"
                 android:textSize="14sp"
-                app:layout_constraintStart_toEndOf="@+id/iv_menu"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_menu_name"/>
+                app:layout_constraintStart_toEndOf="@+id/iv_menu"
+                app:layout_constraintTop_toBottomOf="@+id/tv_menu_name"
+                tools:text="Green Noddle" />
 
             <TextView
                 android:id="@+id/tv_menu_price"
+                bindMenuPrice="@{menu.price}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                bindMenuPrice="@{menu.price}"
-                tools:text="$15"
-                android:textSize="22sp"
-                android:textStyle="bold"
                 android:layout_marginEnd="20dp"
                 android:textColor="@color/orange_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                tools:text="$15" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
