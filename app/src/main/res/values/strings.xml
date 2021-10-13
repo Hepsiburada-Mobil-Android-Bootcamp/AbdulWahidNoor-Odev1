@@ -17,4 +17,8 @@
     <string name="view_more">View More</string>
     <string name="popular_menu">Popular Menu</string>
     <string name="price_dollar">$%d</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="card">Card</string>
+    <string name="chat">Chat</string>
 </resources>
