@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.tabs.TabLayoutMediator
+import com.noor.abdulwahidnoor_odev1.adapter.BannerAdapter
 import com.noor.abdulwahidnoor_odev1.adapter.MenuAdapter
 import com.noor.abdulwahidnoor_odev1.adapter.RestaurantAdapter
 import com.noor.abdulwahidnoor_odev1.databinding.FragmentHomeBinding
+import com.noor.abdulwahidnoor_odev1.util.DummyData.createBannerList
 import com.noor.abdulwahidnoor_odev1.util.DummyData.createMenuList
 import com.noor.abdulwahidnoor_odev1.util.DummyData.createRestaurantList
 
@@ -24,7 +27,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         initRecyclerViews()
-
+        initViewPager()
 
         return binding.root
     }
@@ -32,6 +35,13 @@ class HomeFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    private fun initViewPager() {
+        binding.vpBanner.adapter = BannerAdapter(createBannerList())
+        TabLayoutMediator(binding.tlBanner, binding.vpBanner) { tab, position ->
+            //Some implementation
+        }.attach()
     }
 
     private fun initRecyclerViews() {

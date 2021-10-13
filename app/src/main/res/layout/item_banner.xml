@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="banner"
+            type="com.noor.abdulwahidnoor_odev1.model.Banner" />
+    </data>
+
+    <ImageView
+        android:id="@+id/iv_item_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/desc"
+        bindBanner="@{banner.imageId}"
+        tools:src="@tools:sample/avatars" />
+</layout>

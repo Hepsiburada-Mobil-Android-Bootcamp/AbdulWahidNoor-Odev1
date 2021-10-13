@@ -1,6 +1,7 @@
 package com.noor.abdulwahidnoor_odev1.util
 
 import com.noor.abdulwahidnoor_odev1.R
+import com.noor.abdulwahidnoor_odev1.model.Banner
 import com.noor.abdulwahidnoor_odev1.model.Menu
 import com.noor.abdulwahidnoor_odev1.model.Restaurant
 
@@ -33,6 +34,14 @@ object DummyData {
         }
 
         return menuList
+    }
+
+    fun createBannerList(): ArrayList<Banner> {
+        val bannerList = arrayListOf<Banner>()
+        for (i in 0..3) {
+            bannerList.add(Banner(R.drawable.restaurant1))
+        }
+        return bannerList
     }
 
 }
