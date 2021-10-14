@@ -20,4 +20,18 @@
     <string name="card">Card</string>
     <string name="chat">Chat</string>
     <string name="go_to_third_fragment">Click Find Your Favorite Food Text for go to third page</string>
+    <string name="click_button_for_eat_or_burn">Click button for eat or burn</string>
+    <string name="burn">Burn</string>
+    <string name="eat">Eat</string>
+    <string name="starving">Starving</string>
+    <string name="very_hungry">Very hungry</string>
+    <string name="pretty_hungry">Pretty hungry</string>
+    <string name="starting_feel_hungry">Starting to feel a little hungry</string>
+    <string name="satisfied">Satisfied</string>
+    <string name="little_full">A little full</string>
+    <string name="little_uncomfortable">A little uncomfortable</string>
+    <string name="feeling_stuffed">Feeling stuffed</string>
+    <string name="very_uncomfortable">Very uncomfortable</string>
+    <string name="so_full">So full you feel sick</string>
+    <string name="hungry_percent">%% %d</string>
 </resources>
